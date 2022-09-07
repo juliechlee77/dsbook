@@ -970,7 +970,8 @@ For any given vector it returns a vector with the rank of the first entry, secon
 x <- c(31, 4, 15, 92, 65)
 rank(x)
 ```
-
+rank(x)-> 3 1 2 5 4
+order(x)-> 2 3 1 5 4
 To summarize, let's look at the results of the three functions we have introduced:
 
 ```{r, echo=FALSE}
