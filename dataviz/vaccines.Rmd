@@ -26,7 +26,8 @@ the_disease <- "Measles"
 dat <- us_contagious_diseases |>
   filter(!state%in%c("Hawaii","Alaska") & disease == the_disease) |>
   mutate(rate = count / population * 10000 * 52 / weeks_reporting) |> 
-  mutate(state = reorder(state, rate)) 
+  mutate(state = reorder(state, ifelse(year<=1963, rate, NA), 
+                         median, na.rm = TRUE)) 
 ```
 
 We can now easily plot disease rates per year. Here are the measles data from California:
@@ -57,8 +58,7 @@ dat |> ggplot(aes(year, state, fill = rate)) +
   theme(panel.grid = element_blank(), 
         legend.position="bottom", 
         text = element_text(size = 8)) +
-  ggtitle(the_disease) + 
-  ylab("") + xlab("")
+  labs(title = the_disease, x = "", y = "")
 ```
 
 This plot makes a very striking argument for the contribution of vaccines. However, one limitation of this plot is that it uses color to represent quantity, which we earlier explained makes it harder to know exactly how high values are going. Position and lengths are better cues. If we are willing to lose state information, we can make a version of the plot that shows the values with position. We can also show the average for the US, which we compute like this:

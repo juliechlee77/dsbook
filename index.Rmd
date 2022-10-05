@@ -2,7 +2,6 @@
 title: "Introduction to Data Science"
 subtitle: "Data Analysis and Prediction Algorithms with R"
 author: "Rafael A. Irizarry"
-date: "`r Sys.Date()`"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -32,22 +31,27 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'), 'packages.bib')
 ```
 
+<hr>
+
 # Preface {-}
+<div style= "float:right;position: relative; middle: -80px;box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);"><img src = "logo.png" width = "250"></div>
 
 This book started out as the class notes used in the
- HarvardX [Data Science Series](https://www.edx.org/professional-certificate/harvardx-data-science)^[https://www.edx.org/professional-certificate/harvardx-data-science].
+ HarvardX [Data Science Series](https://www.edx.org/professional-certificate/harvardx-data-science)<!--^[https://www.edx.org/professional-certificate/harvardx-data-science]. -->
 
-A **hardcopy** version of the book is available from [CRC Press](https://www.crcpress.com/Introduction-to-Data-Science-Data-Analysis-and-Prediction-Algorithms-with/Irizarry/p/book/9780367357986)^[https://www.crcpress.com/Introduction-to-Data-Science-Data-Analysis-and-Prediction-Algorithms-with/Irizarry/p/book/9780367357986].
+A **hardcopy** version of the book is available from [CRC Press](https://www.crcpress.com/Introduction-to-Data-Science-Data-Analysis-and-Prediction-Algorithms-with/Irizarry/p/book/9780367357986)<!--^[https://www.crcpress.com/Introduction-to-Data-Science-Data-Analysis-and-Prediction-Algorithms-with/Irizarry/p/book/9780367357986]. -->
 
-A **free PDF** of the October 24, 2019 version of the book is available from [Leanpub](https://leanpub.com/datasciencebook)^[https://leanpub.com/datasciencebook].
+A **free PDF** of the October 24, 2019 version of the book is available from [Leanpub](https://leanpub.com/datasciencebook)<!--^[https://leanpub.com/datasciencebook].-->
 
 A version in **Spanish** is available from  [https://rafalab.github.io/dslibro](https://rafalab.github.io/dslibro/).
 
-The **R markdown code** used to generate the book is available on  [GitHub](https://github.com/rafalab/dsbook)^[https://github.com/rafalab/dsbook]. Note that, the graphical theme used for plots throughout the book can be recreated using the `ds_theme_set()` function from __dslabs__ package.
+This book was published with [bookdown](https://github.com/rstudio/bookdown). The **R markdown code** used to generate the book is available on  [GitHub](https://github.com/rafalab/dsbook)<!--^[https://github.com/rafalab/dsbook]-->. Note that, the graphical theme used for plots throughout the book can be recreated using the `ds_theme_set()` function from __dslabs__ package.
 
 This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
 
 We make announcements related to the book on Twitter. For updates follow [\@rafalab](https://twitter.com/rafalab).
+
+Last update: `r lubridate::now()`
 
 # Acknowledgments {-}
 
@@ -59,7 +63,6 @@ Alyssa Frazee for helping create the homework problem that became the Recommenda
 This book was conceived during the teaching of several applied statistics courses, starting over fifteen years ago. The teaching assistants working with me throughout the years made important indirect contributions to this book. The latest iteration of this course is a HarvardX series coordinated by Heather Sternshein and Zofia Gajdos. We thank them for their contributions. We are also grateful to all the students whose questions and comments helped us improve the book. The courses were partially funded by NIH grant R25GM114818. We are very grateful to the National Institutes of Health for its support.
 
 A special thanks goes to all those who edited the book via GitHub pull requests or made suggestions by creating an _issue_ or sending an email:  `nickyfoto` (Huang Qiang), `desautm` (Marc-André Désautels), `michaschwab` (Michail Schwab), `alvarolarreategui` (Alvaro Larreategui), `jakevc` (Jake VanCampen), `omerta` (Guillermo Lengemann), `espinielli` (Enrico Spinielli), `asimumba`(Aaron Simumba), `braunschweig` (Maldewar), `gwierzchowski` (Grzegorz Wierzchowski), `technocrat` (Richard Careaga), `atzakas`, `defeit` (David Emerson Feit), `shiraamitchell` (Shira Mitchell),  `Nathalie-S`, `andreashandel` (Andreas Handel), `berkowitze` (Elias Berkowitz), `Dean-Webb` (Dean Webber), `mohayusuf`, `jimrothstein`, `mPloenzke` (Matthew Ploenzke), `NicholasDowand` (Nicholas Dow), `kant` (Darío Hereñú), `debbieyuster` (Debbie Yuster), `tuanchauict` (Tuan Chau), `phzeller`, `BTJ01` (BradJ), `glsnow` (Greg Snow), `mberlanda` (Mauro Berlanda), `wfan9`, `larswestvang` (Lars Westvang), `jj999` (Jan Andrejkovic), `Kriegslustig` (Luca Nils Schmid), `odahhani`, `aidanhorn` (Aidan Horn), `atraxler` (Adrienne Traxler), `alvegorova`,`wycheong` (Won Young Cheong), 
-`med-hat` (Medhat Khalil), `kengustafson`, `Yowza63`, `ryan-heslin` (Ryan Heslin), `raffaem`, `tim8west`,
-David D. Kane, El Mustapha El Abbassi, Vadim Zipunnikov, Anna Quaglieri, Chris Dong, and Rick Schoenberg.
+`med-hat` (Medhat Khalil), `kengustafson`, `Yowza63`, `ryan-heslin` (Ryan Heslin), `raffaem`, `tim8west`, `lgatto` (Laurent Gatto), David D. Kane, El Mustapha El Abbassi, Vadim Zipunnikov, Anna Quaglieri, Chris Dong, and Rick Schoenberg.
  
 
