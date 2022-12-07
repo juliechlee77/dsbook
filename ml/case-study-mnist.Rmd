@@ -172,13 +172,13 @@ Now that we have optimized our algorithm, we are ready to fit our final model:
 
 ```{r, eval=FALSE}
 fit_rf <- randomForest(x[, col_index], y, 
-                       minNode = train_rf$bestTune$mtry)
+                       mtry = train_rf$bestTune$mtry)
 ```
 
 ```{r, echo=FALSE}
 ## we hard wire to 10 do make book compilation faster.
 ## we ran previous code once to determin 10 was the best
-fit_rf <- randomForest(x[, col_index], y,  minNode = 10)
+fit_rf <- randomForest(x[, col_index], y,  mtry = 15)
 ```
 
 To check that we ran enough trees we can use the plot function:
